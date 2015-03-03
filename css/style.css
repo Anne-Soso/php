@@ -170,6 +170,10 @@ a {
 .site-video img {
   width: 100%;
 }
+.wrapper {
+  width: 1200px;
+  margin: auto;
+}
 .hidden {
   display: none;
 }

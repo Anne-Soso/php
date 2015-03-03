@@ -20,10 +20,11 @@
   <div class="site-video" >
     <img src="img/video.jpg" class="site-video__image"alt="" />
   </div>
-
-  <section class="site-main">
-    <h1>hello</h1>
-    <?php include($data['view']);?>
-  </section>
+  <div class="wrapper">
+    <section class="site-main">
+      <h1>hello</h1>
+      <?php include($data['view']);?>
+    </section>
+  </div>
 </body>
 </html>
