@@ -130,6 +130,7 @@ table {
 }
 body {
   font-size: 14px;
+  color: #694d23;
 }
 a {
   color: #96662d;
@@ -173,6 +174,10 @@ a {
 .wrapper {
   width: 1200px;
   margin: auto;
+}
+.main-title {
+  font-size: 40px;
+  margin: 30px 0 20px;
 }
 .hidden {
   display: none;
