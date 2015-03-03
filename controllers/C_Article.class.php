@@ -8,8 +8,13 @@ class C_Article extends C_Base{
   }
   public function index(){
     global $a,$e;
-
-    $data=$this->modeleArticle->getAll();
+    if(isset($__GET['category_id'])){
+      $category_id=$__GET['category_id'];
+      $data=$this->modeleArticle->getByCategoryId($category_id);
+    }
+    else{
+      $data=$this->modeleArticle->getAll();
+    }
     $view=$e.$a.'.php';
     $categories=new C_Categorie();
     $categories=$categories->index();

@@ -14,4 +14,7 @@ class Article extends Model{
     return $pdost->fetchAll();
 
   }
+  public function getCategoryById($id){
+
+  }
 }

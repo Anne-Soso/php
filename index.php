@@ -6,7 +6,7 @@ include 'configs/routes.php';
 set_include_path('controllers'.':'.'models'.':'.get_include_path());
 
 /*ajoute les dossiers à ajouter au dossiers à charger (en vue du spl autoload register)*/
-
+session_start();
 spl_autoload_register(function($class){ /*dés qu'on instancie une classe, cherche la classe dans tous les fichiers des chemins chargés en fonction du nom de la classe instanciée*/
   include $class.'.class.php';
 });
