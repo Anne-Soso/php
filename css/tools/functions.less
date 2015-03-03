@@ -1,0 +1,6 @@
+.font-size(@sizeValue) {
+  @remValue: @sizeValue;
+  @pxValue: (@sizeValue * @labeurNombre);
+  font-size: ~"@{pxValue}px";
+  font-size: ~"@{remValue}rem";
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Elevage de la Chavée</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,700,300,600,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <div role="navigation" class="site-nav">
+          <a href="#" class="site-nav__element">Blog</a>
+          <a href="#"class="site-nav__element">À propos</a>
+          <a href="#" title="Aller page d'accueil" class="site-nav__element">
+            <img src="img/chavee.png" class="site-nav__logo" alt="Aller page d'accueil de l'élevage de la Chavée">
+          </a>
+          <a href="#" class="site-nav__element">Chevaux</a>
+          <a href="#" class="site-nav__element">Contact</a>
+  </div>
+  <div class="site-video" >
+    <img src="img/video.jpg" class="site-video__image"alt="" />
+  </div>
+
+  <section class="site-main">
+    <h1></h1>
+    <?php include($data['view']);?>
+  </section>
+</body>
+</html>
