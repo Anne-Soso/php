@@ -129,7 +129,7 @@ table {
   font-family: 'Open Sans', sans-serif;
 }
 body {
-  font-size: 14px;
+  font-size: 15px;
   color: #694d23;
 }
 a {
@@ -143,6 +143,7 @@ a {
   background: white;
   padding: 0 0 30px 0;
   text-align: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
 .site-nav__element {
   display: inline-block;
@@ -179,6 +180,41 @@ a {
   font-size: 40px;
   margin: 30px 0 20px;
   font-weight: 400;
+}
+.article {
+  margin: 30px 0;
+}
+.article__titre {
+  font-size: 25px;
+  font-weight: 100;
+  margin: 0 10px 10px 0;
+}
+.article__texte {
+  line-height: 1.4;
+  clear: both;
+}
+.article__date {
+  font-size: 17px;
+  background: #d79a36;
+  padding: 10px;
+  display: inline-block;
+}
+.article__categorie {
+  background: #694d23;
+  color: #d79a36;
+  margin: 0 0 10px 0;
+  padding: 10px;
+  float: left;
+  display: inline-block;
+  font-size: 17px;
+}
+.blog {
+  width: 700px;
+  float: left;
+}
+.colonne-droite {
+  width: 300px;
+  float: right;
 }
 .hidden {
   display: none;

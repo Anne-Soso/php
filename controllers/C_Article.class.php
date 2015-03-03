@@ -11,7 +11,9 @@ class C_Article extends C_Base{
 
     $data=$this->modeleArticle->getAll();
     $view=$e.$a.'.php';
-    return['view'=>$view,'data'=>$data];
+    $categories=new C_Categorie();
+    $categories=$categories->index();
+    return['view'=>$view,'data'=>$data,'categories'=>$categories];
   }
   public function create(){
     header('Location: http://localhost:8888/php');
