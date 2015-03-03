@@ -22,7 +22,7 @@
   </div>
 
   <section class="site-main">
-    <h1></h1>
+    <h1>hello</h1>
     <?php include($data['view']);?>
   </section>
 </body>
