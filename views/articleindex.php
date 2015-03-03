@@ -1,5 +1,4 @@
 <div id="articles">
-  Les messages
   <?php foreach($data['data'] as $article):?>
     <h2><?php echo($article->title); ?></h2>
     <div>

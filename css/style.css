@@ -178,6 +178,7 @@ a {
 .main-title {
   font-size: 40px;
   margin: 30px 0 20px;
+  font-weight: 400;
 }
 .hidden {
   display: none;
