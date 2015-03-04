@@ -2,6 +2,7 @@
 $routes=[
       'default'=>'index/article',
       'createArticle'=>'create/article',
+      'updateArticle'=>'update/article',
       'collectUser'=>'collect/user',
       'checkUser'=>'check/user',
       'disconnectUser'=>'disconnect/user'
