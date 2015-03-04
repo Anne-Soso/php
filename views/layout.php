@@ -9,18 +9,21 @@
 </head>
 <body>
   <div role="navigation" class="site-nav">
+
+          <a href="#" title="Aller page d'accueil" class="site-nav__element site-nav__element--logo">
+              <img src="img/chavee2.png" class="site-nav__logo" alt="Aller page d'accueil de l'élevage de la Chavée">
+          </a>
           <a href="#" class="site-nav__element">Blog</a>
           <a href="#"class="site-nav__element">À propos</a>
-          <a href="#" title="Aller page d'accueil" class="site-nav__element">
-            <img src="img/chavee.png" class="site-nav__logo" alt="Aller page d'accueil de l'élevage de la Chavée">
-          </a>
           <a href="#" class="site-nav__element">Chevaux</a>
           <a href="#" class="site-nav__element">Contact</a>
-          <?php if(!isset($_SESSION['connected'])):?>
-            <a href="?a=collect&e=user">Identifiez-vous</a>
-          <?php else:?>
-            <a href="?a=disconnect&e=user">Déconnectez-vous</a>
-          <?php endif;?>
+          <div class="site-nav__profil">
+            <?php if(!isset($_SESSION['connected'])):?>
+              <a href="?a=collect&e=user">Identifiez-vous</a>
+            <?php else:?>
+              <a href="?a=disconnect&e=user">Déconnectez-vous</a>
+            <?php endif;?>
+          </div>
   </div>
   <div class="site-video" >
     <img src="img/video.jpg" class="site-video__image"alt="" />

@@ -1,10 +1,10 @@
 .site-nav{
   position:fixed;
-  top:-15px;
+  top:0px;
   width:100%;
   left:0px;
   background: white;
-  padding:0 0 40px 0;
+  padding:50px 0 60px 0;
   text-align:center;
   box-shadow:0px 0px 20px rgba(0,0,0,0.2);
 }
@@ -15,16 +15,28 @@
   vertical-align:bottom;
   font-weight:100;
   color:@brun;
-  .font-size(1.7);
+  .font-size(1.6);
   &:hover{
     color:@orange;
   }
 }
+.site-nav__element--logo{
+  position:absolute;
+  left:20px;
+  top:-5px;
+}
 .site-nav__logo{
-  width:140px;
+  width:210px;
   position:relative;
-  top:28px;
+  top:20px;
   &:hover{
     opacity:0.7;
   }
+}
+.site-nav__profil{
+  position:absolute;
+  right:20px;
+  top:30px;
+  font-variant:small-caps;
+  font-size:20px;
 }

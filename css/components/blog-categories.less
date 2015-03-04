@@ -1,8 +1,17 @@
 .blog-categories__link{
-  font-size:25px;
-  display:block;
+  .font-size(1.5);
   margin:10px 0;
   color:@orange;
   text-decoration:none;
+  &:after{
+    content:", ";
+    color:@brunOrange;
+  }
 
+}
+.blog-categories__item{
+  display:inline;
+  &:last-child .blog-categories__link:after{
+    content:" ";
+  }
 }
