@@ -1,9 +1,5 @@
 <div class="blog">
-  <?php if(!isset($_SESSION['connected'])):?>
-    <a href="?a=collect&e=user">Identifiez-vous</a>
-  <?php else:?>
-    <a href="?a=disconnect&e=user">Déconnectez-vous</a>
-  <?php endif;?>
+
 
 
   <?php foreach($data['data'] as $article):?>
@@ -24,7 +20,9 @@
 
 </div>
 <div class="colonne-droite">
+  <h2 class="colonne-droite__titre">Catégories</h2>
   <ul class="blog-categories"><?php foreach($data['categories'] as $categorie):?>
     <li class="blog-categories__item"><a class="blog-categories__link" href="index.php?a=index&e=article&category_id=<?php echo($categorie->id);?>"><?php echo($categorie->name); ?></a></li>
   <?php endforeach;?></ul>
+
 </div>

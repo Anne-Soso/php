@@ -209,12 +209,19 @@ a {
   font-size: 17px;
 }
 .blog {
-  width: 700px;
   float: left;
+  width: 700px;
 }
 .colonne-droite {
   width: 300px;
   float: right;
+}
+.colonne-droite__titre {
+  font-size: 30px;
+  font-weight: 400;
+}
+.colonne-droite__item {
+  display: inline;
 }
 .blog-categories__link {
   font-size: 25px;
