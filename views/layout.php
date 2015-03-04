@@ -35,5 +35,6 @@
       <?php endif;?>
     </div>
   </div>
+  <footer class="site-footer"></footer>
 </body>
 </html>
