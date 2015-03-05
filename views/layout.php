@@ -10,9 +10,9 @@
 <body>
   <div role="navigation" class="site-nav">
           <div class="wrapper">
-            <a href="#" class="site-nav__element">Blog</a>
+            <a href="?a=index&e=article" class="site-nav__element">Blog</a>
             <a href="#"class="site-nav__element">À propos</a>
-            <a href="#" title="Aller page d'accueil" class="site-nav__element site-nav__element--logo">
+            <a href="index.php" title="Aller page d'accueil" class="site-nav__element site-nav__element--logo">
                 <img src="img/chavee2.png" class="site-nav__logo" alt="Aller page d'accueil de l'élevage de la Chavée">
             </a>
             <a href="#" class="site-nav__element">Chevaux</a>
