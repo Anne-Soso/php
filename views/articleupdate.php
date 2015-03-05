@@ -1,4 +1,4 @@
-<form class="form form--main" action="index.php" method="post" enctype="multipart/form-data">
+<form class="form form--main" action="index.php" method="post" enctype="multipart/form-data" onsubmit="editor.post()">
   <div class="form__division">
 
     <label class="form__label" for="titreArticle">Titre</label>
