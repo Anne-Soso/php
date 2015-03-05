@@ -15,7 +15,7 @@
     <label class="form__label" for="categorie">Catégorie de l'article</label>
     <select class="form__select" name="categorie" id="categorie">
       <?php foreach($data['categories'] as $categorie):?>
-        <option value="<?php echo($categorie->id);?>"><?php echo $categorie->name;?></option>
+        <option value="<?php echo($categorie->id);?>" <?php echo($categorie->name=='Non classé'?'selected':' '); ?> ><?php echo $categorie->name;?></option>
       <?php endforeach;?>
     </select>
   </div>

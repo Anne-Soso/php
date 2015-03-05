@@ -14,6 +14,9 @@ class C_Article extends C_Base{
     if(isset($_GET['category_id'])){
       $category_id=$_GET['category_id'];
       $data=$this->modeleArticle->getByCategoryId($category_id);
+      if(!$data){
+        header('Location:http://localhost:8888/php');
+      }
       $titre='Catégorie '.$data[0]->name;
     }
     else{
@@ -33,12 +36,11 @@ class C_Article extends C_Base{
       $requete=$_POST;
       $titre=$requete['titreArticle'];
       $texte=$requete['texteArticle'];
-      $categorie=$requete['categorie'];
-
+      $categorie=$requete['categorie']?$requete['categorie']:4;
+      $adresse=false;
       if(!$_FILES['fichierImage']['error']){
         $nameparts=explode('.',$_FILES['fichierImage']['name']);
         $newname= 'i'.time().'.'.end($nameparts);
-
         if(!@move_uploaded_file($_FILES['fichierImage']['tmp_name'],'./img/blog/'.$newname)){
           die('Il y a eu un problème');
         }
@@ -66,6 +68,7 @@ class C_Article extends C_Base{
       $texte=$requete['texteArticle'];
       $categorie=$requete['categorie'];
       $id=$requete['id'];
+
       if(!$_FILES['fichierImage']['error']){
         $nameparts=explode('.',$_FILES['fichierImage']['name']);
         $newname= 'i'.time().'.'.end($nameparts);
@@ -78,6 +81,7 @@ class C_Article extends C_Base{
       }
       $this->modeleArticle->update($id,$titre,$texte,$categorie,$adresse);
       header('Location:http://localhost:8888/php');
+
     }else{
       $view=$e.$a.'.php';
       $categories=new Categorie();

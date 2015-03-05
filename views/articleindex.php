@@ -11,7 +11,7 @@
       <div class="article__date">
         <?php echo(date("d / m", strtotime($article->date)));?>
       </div>
-      <?php if($article->adresseImage):?>
+      <?php if(isset($article->adresseImage)):?>
           <img class="article__image" src="<?php echo($article->adresseImage);?>" alt="" />
       <?php endif;?>
       <p class="article__texte">
