@@ -13,15 +13,17 @@ class C_Article extends C_Base{
     global $a,$e;
     if(isset($_GET['category_id'])){
       $category_id=$_GET['category_id'];
-      $data=$this->modeleArticle->getCategoryById($category_id);
+      $data=$this->modeleArticle->getByCategoryId($category_id);
+      $titre='Catégorie '.$data[0]->name;
     }
     else{
       $data=$this->modeleArticle->getAll();
+      $titre='Blog de la Chavée';
     }
     $view=$e.$a.'.php';
-    $categories=new C_Categorie();
-    $categories=$categories->index();
-    return['view'=>$view,'data'=>$data,'categories'=>$categories];
+    $categories=new Categorie();
+    $categories=$categories->getAll();
+    return['view'=>$view,'data'=>$data,'categories'=>$categories,'titre'=>$titre];
   }
 
 
@@ -36,9 +38,9 @@ class C_Article extends C_Base{
       header('Location:http://localhost:8888/php');
     }else{
       $view=$e.$a.'.php';
-      $categories=new C_Categorie();
-      $categories=$categories->index();
-      return['view'=>$view,'categories'=>$categories];
+      $categories=new Categorie();
+      $categories=$categories->getAll();
+      return['view'=>$view,'categories'=>$categories,'titre'=>'Ajouter un nouvel article'];
     }
   }
 
@@ -56,11 +58,11 @@ class C_Article extends C_Base{
       header('Location:http://localhost:8888/php');
     }else{
       $view=$e.$a.'.php';
-      $categories=new C_Categorie();
+      $categories=new Categorie();
       $id=$_GET['id'];
       $data=$this->modeleArticle->get($id);
-      $categories=$categories->index();
-      return['view'=>$view,'data'=>$data,'categories'=>$categories];
+      $categories=$categories->getAll();
+      return['view'=>$view,'data'=>$data,'categories'=>$categories,'titre'=>'Modifier l\'article'];
     }
   }
 

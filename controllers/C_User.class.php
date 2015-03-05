@@ -4,7 +4,7 @@ class C_User{
     $this->modelUser=new User();
   }
   public function collect(){
-    return['data'=>null,'view'=>'userCollect.php'];
+    return['data'=>null,'view'=>'userCollect.php','titre'=>'Identifiez-vous'];
   }
 
   private function create($email,$password){

@@ -7,7 +7,7 @@ class Article extends Model{
 
 
   public function get($id){
-    $sql='SELECT title,date,body,name,posts.id FROM posts JOIN categories ON category_id=categories.id WHERE posts.id=:id ORDER BY date';
+    $sql='SELECT title,date,body,name,posts.id,category_id FROM posts JOIN categories ON category_id=categories.id WHERE posts.id=:id ORDER BY date';
     $pdost=$this->connexion->prepare($sql);
     $pdost->execute([':id'=>$id]);
     return $pdost->fetch();
@@ -22,7 +22,7 @@ class Article extends Model{
   }
 
 
-  public function getCategoryById($id){
+  public function getByCategoryId($id){
     $sql='SELECT title,date,body,name FROM posts JOIN categories ON category_id=categories.id WHERE category_id=:id ORDER BY date';
     $pdost=$this->connexion->prepare($sql);
     $pdost->execute([':id'=>$id]);

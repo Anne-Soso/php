@@ -257,6 +257,61 @@ a {
 .site-footer {
   background: #452418;
   min-height: 300px;
+  margin-top: 70px;
+}
+.form--main {
+  width: 700px;
+}
+.form__texte {
+  width: 100%;
+  display: block;
+  border: 1px solid #d79a36;
+  padding: 5px;
+  color: #452418;
+  font-size: 14px;
+  font-size: 1rem;
+}
+.form__area {
+  display: block;
+  color: #452418;
+  border: 1px solid #d79a36;
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  font-size: 1rem;
+}
+.form__division {
+  margin-bottom: 20px;
+}
+.form__label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 16.8px;
+  font-size: 1.2rem;
+}
+.form__button {
+  border: none;
+  font-size: 19.599999999999998px;
+  font-size: 1.4rem;
+  color: #d79a36;
+  margin-top: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2) inset;
+  font-variant: small-caps;
+  background: #452418;
+  padding: 7px 0;
+  text-align: center;
+  width: 100%;
+}
+.form__select {
+  font-size: 16.8px;
+  font-size: 1.2rem;
+  padding: 5px;
+  border: 1px solid #d79a36;
+  border-radius: 0px;
+  background: white;
+  width: 300px;
+  color: #694d23;
+  -webkit-appearance: none;
 }
 .hidden {
   display: none;

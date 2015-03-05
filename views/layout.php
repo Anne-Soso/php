@@ -24,7 +24,7 @@
   </div>
   <div class="wrapper">
     <section class="site-main clearfix">
-      <h1 class="main-title">Blog de la Chavée</h1>
+      <h1 class="main-title"><?php echo($data['titre']);?></h1>
       <?php include($data['view']);?>
     </section>
     <div>
