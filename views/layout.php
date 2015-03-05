@@ -5,7 +5,7 @@
   <title>Elevage de la Chavée</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,700,300,600,400' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js"></script>
+  <script type="text/javascript" src="js/packed.js"></script>
 </head>
 <body>
   <div role="navigation" class="site-nav">
@@ -27,14 +27,39 @@
       <h1 class="main-title"><?php echo($data['titre']);?></h1>
       <?php include($data['view']);?>
     </section>
-    <div>
-      <?php if(!isset($_SESSION['connected'])):?>
-        <a href="?a=collect&e=user">Identifiez-vous</a>
-      <?php else:?>
-        <a href="?a=disconnect&e=user">Déconnectez-vous</a>
-      <?php endif;?>
-    </div>
   </div>
-  <footer class="site-footer"></footer>
+  <footer class="site-footer">
+    <div>
+        <?php if(!isset($_SESSION['connected'])):?>
+          <a href="?a=collect&e=user">Identifiez-vous</a>
+        <?php else:?>
+          <a href="?a=disconnect&e=user">Déconnectez-vous</a>
+        <?php endif;?>
+      </div>
+  </footer>
+  <script type="text/javascript">
+  var editor=new TINY.editor.edit('editor',{
+  	id:'texteArticle',
+  	width:584,
+  	height:175,
+  	cssclass:'te',
+  	controlclass:'tecontrol',
+  	rowclass:'teheader',
+  	dividerclass:'tedivider',
+  	controls:['bold','italic','underline','strikethrough','|','subscript','superscript','|',
+  			  'orderedlist','unorderedlist','|','outdent','indent','|','leftalign',
+  			  'centeralign','rightalign','blockjustify','|','unformat','|','undo','redo','n',
+  			  'font','size','style','|','image','hr','link','unlink','|','cut','copy','paste','print'],
+  	footer:true,
+  	fonts:['Verdana','Arial','Georgia','Trebuchet MS'],
+  	xhtml:true,
+  	cssfile:'css/style.css',
+  	bodyid:'editor',
+  	footerclass:'tefooter',
+  	toggle:{text:'source',activetext:'wysiwyg',cssclass:'toggle'},
+  	resize:{cssclass:'resize'}
+  });
+
+  </script>
 </body>
 </html>

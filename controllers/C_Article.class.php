@@ -16,6 +16,7 @@ class C_Article extends C_Base{
       $data=$this->modeleArticle->getByCategoryId($category_id);
       if(!$data){
         header('Location:http://localhost:8888/php');
+        $titre='Catégorie actuellement vide';
       }
       $titre='Catégorie '.$data[0]->name;
     }

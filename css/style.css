@@ -140,6 +140,90 @@ a {
   display: block;
   clear: both;
 }
+sbody {
+  margin: 0;
+  font: 12px Verdana, Arial;
+}
+#input {
+  border: none;
+  margin: 0;
+  padding: 0;
+  font: 14px 'Courier New', Verdana;
+  border: 0;
+}
+.te {
+  border: 1px solid #bbb;
+  padding: 0 1px 1px;
+  font: 12px Verdana,Arial;
+  margin: 25px;
+}
+.te iframe {
+  border: none;
+}
+.teheader {
+  height: 31px;
+  border-bottom: 1px solid #bbb;
+  background: url(images/header-bg.gif) repeat-x;
+  padding-top: 1px;
+}
+.teheader select {
+  float: left;
+  margin-top: 5px;
+}
+.tefont {
+  margin-left: 12px;
+}
+.tesize {
+  margin: 0 3px;
+}
+.testyle {
+  margin-right: 12px;
+}
+.tedivider {
+  float: left;
+  width: 1px;
+  height: 30px;
+  background: #cccccc;
+}
+.tecontrol {
+  float: left;
+  width: 34px;
+  height: 30px;
+  cursor: pointer;
+  background-image: url(images/icons.png);
+}
+.tecontrol:hover {
+  background-color: #fff;
+  background-position: 30px 0;
+}
+.tefooter {
+  height: 32px;
+  border-top: 1px solid #bbb;
+  background: #f5f5f5;
+}
+.toggle {
+  float: left;
+  background: url(images/icons.png) -34px 2px no-repeat;
+  padding: 9px 13px 0 31px;
+  height: 23px;
+  border-right: 1px solid #ccc;
+  cursor: pointer;
+  color: #666666;
+}
+.toggle:hover {
+  background-color: #ffffff;
+}
+.resize {
+  float: right;
+  height: 32px;
+  width: 32px;
+  background: url(images/resize.gif) 15px 15px no-repeat;
+  cursor: s-resize;
+}
+#editor {
+  cursor: text;
+  margin: 10px;
+}
 .site-nav {
   position: fixed;
   top: 0px;
@@ -271,6 +355,7 @@ a {
   display: block;
   border: 1px solid #d79a36;
   padding: 5px;
+  box-sizing: border-box;
   color: #452418;
   font-size: 14px;
   font-size: 1rem;
@@ -284,8 +369,19 @@ a {
   font-size: 14px;
   font-size: 1rem;
 }
+.te {
+  margin: 0;
+  box-sizing: border-box;
+  width: 100% !important;
+  border-color: #d79a36;
+}
 .form__division {
   margin-bottom: 20px;
+}
+.form__division--petit {
+  width: 50%;
+  vertical-align: top;
+  display: inline-block;
 }
 .form__label {
   display: block;
@@ -298,13 +394,16 @@ a {
   font-size: 19.599999999999998px;
   font-size: 1.4rem;
   color: #d79a36;
-  margin-top: 10px;
+  margin-top: 18px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2) inset;
   font-variant: small-caps;
   background: #452418;
   padding: 7px 0;
   text-align: center;
   width: 100%;
+}
+.form__file {
+  margin-top: 10px;
 }
 .form__select {
   font-size: 16.8px;
@@ -313,7 +412,7 @@ a {
   border: 1px solid #d79a36;
   border-radius: 0px;
   background: white;
-  width: 300px;
+  width: 100%;
   color: #694d23;
   -webkit-appearance: none;
 }
