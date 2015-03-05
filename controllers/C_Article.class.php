@@ -66,8 +66,17 @@ class C_Article extends C_Base{
       $texte=$requete['texteArticle'];
       $categorie=$requete['categorie'];
       $id=$requete['id'];
-      header('Location:http://google.be');
-      $this->modeleArticle->update($id,$titre,$texte,$categorie);
+      if(!$_FILES['fichierImage']['error']){
+        $nameparts=explode('.',$_FILES['fichierImage']['name']);
+        $newname= 'i'.time().'.'.end($nameparts);
+
+        if(!@move_uploaded_file($_FILES['fichierImage']['tmp_name'],'./img/blog/'.$newname)){
+          die('Il y a eu un problème');
+        }
+
+        $adresse='./img/blog/'.$newname;
+      }
+      $this->modeleArticle->update($id,$titre,$texte,$categorie,$adresse);
       header('Location:http://localhost:8888/php');
     }else{
       $view=$e.$a.'.php';
