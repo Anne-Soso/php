@@ -38,8 +38,16 @@ class Article extends Model{
 
 
   public function update($id,$titre,$texte,$categorie,$adresseImage){
-    $sql="UPDATE posts SET title= :titre, body= :texte, category_id= :categorie, adresseImage= :adresseImage WHERE id= :id";
-    $pdost=$this->connexion->prepare($sql);
-    $pdost->execute([':titre'=>$titre,':texte'=>$texte,':categorie'=>$categorie,':id'=>$id,':adresseImage'=>$adresseImage]);
+    if($adresseImage){
+      $sql="UPDATE posts SET title= :titre, body= :texte, category_id= :categorie, adresseImage= :adresseImage WHERE id= :id";
+      $pdost=$this->connexion->prepare($sql);
+      $pdost->execute([':titre'=>$titre,':texte'=>$texte,':categorie'=>$categorie,':id'=>$id,':adresseImage'=>$adresseImage]);
+
+    }else{
+      $sql="UPDATE posts SET title= :titre, body= :texte, category_id= :categorie WHERE id= :id";
+      $pdost=$this->connexion->prepare($sql);
+      $pdost->execute([':titre'=>$titre,':texte'=>$texte,':categorie'=>$categorie,':id'=>$id]);
+    }
+
   }
 }

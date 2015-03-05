@@ -69,7 +69,7 @@ class C_Article extends C_Base{
       $texte=$requete['texteArticle'];
       $categorie=$requete['categorie'];
       $id=$requete['id'];
-
+      $adresse=0;
       if(!$_FILES['fichierImage']['error']){
         $nameparts=explode('.',$_FILES['fichierImage']['name']);
         $newname= 'i'.time().'.'.end($nameparts);

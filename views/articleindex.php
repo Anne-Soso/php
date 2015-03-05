@@ -14,9 +14,9 @@
       <?php if(isset($article->adresseImage)):?>
           <img class="article__image" src="<?php echo($article->adresseImage);?>" alt="" />
       <?php endif;?>
-      <p class="article__texte">
+      <div class="article__texte">
         <?php echo($article->body)?>
-      </p>
+      </div>
     </div>
 
   <?php endforeach;?>

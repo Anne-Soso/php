@@ -375,6 +375,9 @@ sbody {
   width: 100% !important;
   border-color: #d79a36;
 }
+.te .iframe {
+  width: 100% !important;
+}
 .form__division {
   margin-bottom: 20px;
 }
