@@ -9,6 +9,10 @@
     <textarea class="form__area" name="texteArticle" id="texteArticle" rows="8" cols="40"><?php echo($data['data']->body)?></textarea>
   </div>
   <div class="form__division">
+    <label class="form__label" for="fichierImage">Ajouter une image</label>
+    <input class="form__file" type="file" name="fichierImage" id="fichierImage">
+  </div>
+  <div class="form__division">
     <label class="form__label" for="categorie">Catégorie de l'article</label>
     <select class="form__select" name="categorie" id="categorie">
       <?php foreach($data['categories'] as $categorie):?>

@@ -1,4 +1,4 @@
-<form class="form form--main" action="index.php" method="post">
+<form class="form form--main" action="index.php" method="post" enctype="multipart/form-data">
   <div class="form__division">
     <label class="form__label" for="titreArticle">Titre</label>
     <input class="form__texte" type="text" name="titreArticle" id="titreArticle">
@@ -6,6 +6,10 @@
   <div class="form__division">
     <label class="form__label" for="texteArticle">Texte</label>
     <textarea class="form__area" name="texteArticle" id="texteArticle" rows="8" cols="40"></textarea>
+  </div>
+  <div class="form__division">
+    <label class="form__label" for="fichierImage">Ajouter une image</label>
+    <input class="form__file" type="file" name="fichierImage" id="fichierImage">
   </div>
   <div class="form__division">
     <label class="form__label" for="categorie">Catégorie de l'article</label>

@@ -15,7 +15,7 @@ class Article extends Model{
 
 
   public function getAll(){
-    $sql='SELECT title,date,body,name FROM posts JOIN categories WHERE category_id=categories.id ORDER BY date';
+    $sql='SELECT title,date,body,name,adresseImage FROM posts JOIN categories WHERE category_id=categories.id ORDER BY date';
     $pdost=$this->connexion->query($sql);
     return $pdost->fetchAll();
 
@@ -30,10 +30,10 @@ class Article extends Model{
   }
 
 
-  public function create($titre,$texte,$categorie){
-    $sql="INSERT INTO posts (title,body,category_id) VALUES(:titre,:texte,:categorie)";
+  public function create($titre,$texte,$categorie,$adresseImage){
+    $sql="INSERT INTO posts (title,body,category_id,adresseImage) VALUES(:titre,:texte,:categorie,:adresseImage)";
     $pdost=$this->connexion->prepare($sql);
-    $pdost->execute([':titre'=>$titre,':texte'=>$texte,':categorie'=>$categorie]);
+    $pdost->execute([':titre'=>$titre,':texte'=>$texte,':categorie'=>$categorie,':adresseImage'=>$adresseImage]);
   }
 
 

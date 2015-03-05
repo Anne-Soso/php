@@ -34,9 +34,22 @@ class C_Article extends C_Base{
       $titre=$requete['titreArticle'];
       $texte=$requete['texteArticle'];
       $categorie=$requete['categorie'];
-      $this->modeleArticle->create($titre,$texte,$categorie);
+
+      if(!$_FILES['fichierImage']['error']){
+        $nameparts=explode('.',$_FILES['fichierImage']['name']);
+        $newname= 'i'.time().'.'.end($nameparts);
+
+        if(!@move_uploaded_file($_FILES['fichierImage']['tmp_name'],'./img/blog/'.$newname)){
+          die('Il y a eu un problème');
+        }
+
+        $adresse='./img/blog/'.$newname;
+      }
+
+      $this->modeleArticle->create($titre,$texte,$categorie,$adresse);
       header('Location:http://localhost:8888/php');
-    }else{
+
+    }else{ /*REQUETE GET*/
       $view=$e.$a.'.php';
       $categories=new Categorie();
       $categories=$categories->getAll();
