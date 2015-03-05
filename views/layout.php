@@ -29,13 +29,25 @@
     </section>
   </div>
   <footer class="site-footer">
-    <div>
-        <?php if(!isset($_SESSION['connected'])):?>
-          <a href="?a=collect&e=user">Identifiez-vous</a>
-        <?php else:?>
-          <a href="?a=disconnect&e=user">Déconnectez-vous</a>
-        <?php endif;?>
+    <div class="wrapper">
+      <div class="site-footer__item">
+        <h2 class="site-footer__titre">Coordonnées</h2>
+        <adress>
+          Charly Leyder & Claudine Bordet<br>
+          Rue des Pépinières 7<br>
+          Ebly 6860<br>
+          Belgique
+          <a class="site-footer__link" href="tel:087334444">087.33.44.44</a>
+        </adress>
       </div>
+      <div class="site-footer__connexion">
+          <?php if(!isset($_SESSION['connected'])):?>
+            <a href="?a=collect&e=user">Identifiez-vous</a>
+          <?php else:?>
+            <a href="?a=disconnect&e=user">Déconnectez-vous</a>
+          <?php endif;?>
+      </div>
+    </div>
   </footer>
   <script type="text/javascript">
   var editor=new TINY.editor.edit('editor',{
